@@ -23,26 +23,26 @@ Select Ename,Sal
 From tblemployee
 Where Ename !='JAMES'
 
----5. Find out the details of employees whose names begin with ‘S’.
+---5. Find out the details of employees whose names begin with â€˜Sâ€™.
 Select *
 From tblemployee
 Where Ename LIKE 'S%'
 
 
 
----6. Find out the names of all employees that have ‘A’ anywhere in their name.
+---6. Find out the names of all employees that have â€˜Aâ€™ anywhere in their name.
 Select *
 From tblemployee
 Where Ename LIKE '%A%'
 
----7. Find out the names of all employees that have ‘L’ as their third character in their name.
+---7. Find out the names of all employees that have â€˜Lâ€™ as their third character in their name.
 Select Ename
 From tblemployee
 Where Ename LIKE '__L%'
 
 
 
----8. Find out the names of the employees whose name begin with ‘A’ or ‘M’.
+---8. Find out the names of the employees whose name begin with â€˜Aâ€™ or â€˜Mâ€™.
 Select Ename
 From tblemployee
 Where Ename LIKE 'A%' OR Ename LIKE 'M%'
