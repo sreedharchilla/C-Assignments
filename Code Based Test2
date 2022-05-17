@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Code_Based_Test2
+{
+    public delegate void calculator(int a, int b);
+
+
+
+
+
+    class Program
+    {
+        public static void addition(int a, int b)
+        {
+            int res = a + b;
+            Console.WriteLine(" The Addition result is {0}", res);
+        }
+        public static void substraction(int a, int b)
+        {
+            int res = a - b;
+            Console.WriteLine(" The Substraction result is {0}", res);
+        }
+        public static void multiplication(int a, int b)
+        {
+            int res = a * b;
+            Console.WriteLine(" The Multiplication result is {0}", res);
+        }
+        public static void division(int a, int b)
+        {
+            int res = a / b;
+            Console.WriteLine(" The division result is {0}", res);
+        }
+        static void Main(string[] args)
+        {
+            calculator ca = new calculator(Program.addition);
+            ca.Invoke(10, 20);
+            ca = substraction;
+            ca(20, 10);
+            ca = multiplication;
+            ca(30, 40);
+            ca = division;
+            ca(50, 10);
+            Console.ReadLine();
+        }
+    }
+}
