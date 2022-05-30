@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<!--1. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).-->
+
+<body>
+
+1st Number: <input id="Sreedhar" type="text" size="30" /><br /><br />
+2nd Number: <input id="Chilla" type="text" size="30" /><br /><br />
+
+
+
+<button onclick="multiply()">multiply</button>
+<button onclick="divide()">Divide</button>
+
+
+
+<div id="result"></div>
+<script type="text/javascript">
+function multiply() {
+var one = document.getElementById("Sreedhar").value;
+var two = document.getElementById("Chilla").value;
+document.getElementById('result').innerHTML = 'The result is :' + one * two;
+}
+function divide() {
+var one = document.getElementById("Sreedhar").value;
+var two = document.getElementById("Chilla").value;
+document.getElementById('result').innerHTML = 'The result is:' + one % two;
+}
+</script>
+</body>
+
+<!--2. Write a JavaScript program to compute the sum of the given two integers. If the two values are same, then returns triple their sum-->
+<!----
+<body>
+
+
+
+enter first number: <input id="Sreedhar" type="text" size="30" /><br /><br />
+enter second number: <input id="Chilla" type="text" size="30" /><br /><br />
+<div id="result"></div>
+<button onclick="sum()">click</button>
+
+
+<script type="text/javascript">
+
+function sum() {
+var one = parseInt(document.getElementById("Sreedhar").value);
+var two = parseInt(document.getElementById("Chilla").value);
+if (one === two) {
+document.getElementById('result').innerHTML = 'The result is:' + (one + two)*3 ;
+
+
+}
+else {
+document.getElementById('result').innerHTML = 'The result is:' + (one + two);
+
+}
+}
+
+</script>
+
+</body>
+-->
+<!--3. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if both of them are in the said range, else false.-->
+<!----
+<body>
+
+
+
+    enter first number: <input id="Sreedhar" type="text" size="30" /><br /><br />
+    enter second number: <input id="Chilla" type="text" size="30" /><br /><br />
+
+
+
+    <button onclick="check()">check</button>
+
+
+
+    <div id="result"></div>
+
+
+    <script type="text/javascript">
+
+
+
+        function check() {
+            var one = parseInt(document.getElementById("Sreedhar").value);
+            var two = parseInt(document.getElementById("Chilla").value);
+            if ((one > 50 && one < 99) && (two > 50 && two < 99)) {
+                document.getElementById('result').innerHTML = true;
+            }
+            else {
+                document.getElementById('result').innerHTML = false;
+            }
+        }
+
+ </script>
+
+</body>--->
