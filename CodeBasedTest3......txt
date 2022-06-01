@@ -1,0 +1,110 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace CodeBasedTest3
+{
+    class Program
+    {
+        public static SqlConnection con;
+        public static SqlCommand cmd;
+        public static SqlDataReader dr;
+
+
+
+        public static SqlConnection getconnection()
+        {
+            con = new SqlConnection(@"data source =RMGW58ZLPC0848\\SQLEXPRESS ; Initial Catalog = EmployeeManagement; user id =sa; password =Temp1234");
+            con.Open();
+            return con;
+        }
+
+
+
+        public static void insertEmployee()
+        {
+            try
+            {
+                con = getconnection();
+                Console.WriteLine("enter the Employee name is : ");
+                string Ename = Console.ReadLine();
+                Console.WriteLine("enter the Employee Salary is : ");
+                float Esal = Convert.ToSingle(Console.ReadLine());
+                Console.WriteLine("enter the employee type of (C or P) : ");
+                string Etype = Console.ReadLine();
+                cmd = new SqlCommand("AddEmployee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd = new SqlCommand(" The Execute AddEmployee @Ename,@Esal,@Etype");
+                cmd.Parameters.Add(new SqlParameter("@Ename", Ename));
+                cmd.Parameters.Add(new SqlParameter("@Esal", Esal));
+                cmd.Parameters.Add(new SqlParameter("@Etype", Etype));
+
+                cmd.Connection = con;
+                int res = cmd.ExecuteNonQuery();
+                if (res > 0)
+                {
+                    Console.WriteLine("rows effected :{0}", res);
+                }
+                else
+                {
+                    Console.WriteLine("No Row Effected");
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        public static void DisplayAllEmployee()
+        {
+            con = getconnection();
+
+
+            cmd = new SqlCommand("select * from Code_Employee", con);
+
+
+
+
+            dr = cmd.ExecuteReader();
+
+
+
+            while (dr.Read())
+            {
+                Console.WriteLine(" The Emp Id is : " + dr[0]);
+                Console.WriteLine(" The Emp name is : " + dr[1]);
+                Console.WriteLine(" The Emp Salary is : " + dr[2]);
+                Console.WriteLine(" The Emp Type is : " + dr[3]);
+                Console.WriteLine("****************************************************");
+
+            }
+        }
+        static void Main(string[] args)
+        {
+            insertEmployee();
+            DisplayAllEmployee();
+            Console.Read();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
