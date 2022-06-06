@@ -1,0 +1,7 @@
+C:\.Net Assignment\CaseStudyMiniProject\CaseStudy\CaseStudy\bin\Debug\CaseStudy.exe.config
+C:\.Net Assignment\CaseStudyMiniProject\CaseStudy\CaseStudy\bin\Debug\CaseStudy.exe
+C:\.Net Assignment\CaseStudyMiniProject\CaseStudy\CaseStudy\bin\Debug\CaseStudy.pdb
+C:\.Net Assignment\CaseStudyMiniProject\CaseStudy\CaseStudy\obj\Debug\CaseStudy.csproj.AssemblyReference.cache
+C:\.Net Assignment\CaseStudyMiniProject\CaseStudy\CaseStudy\obj\Debug\CaseStudy.csproj.CoreCompileInputs.cache
+C:\.Net Assignment\CaseStudyMiniProject\CaseStudy\CaseStudy\obj\Debug\CaseStudy.exe
+C:\.Net Assignment\CaseStudyMiniProject\CaseStudy\CaseStudy\obj\Debug\CaseStudy.pdb
